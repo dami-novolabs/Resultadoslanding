@@ -1,0 +1,371 @@
+🎯 PROMPT OPTIMIZADO PARA V0.DEV - NOVOLABS STARTUP SCHOOL
+
+=================================================================
+📋 COPIA Y PEGA ESTE PROMPT COMPLETO EN V0.DEV:
+=================================================================
+
+Crea una landing page profesional para "Novolabs Startup School" (escuela de startups) con diseño moderno y minimalista. Next.js 14+ con App Router.
+
+PALETA DE COLORES:
+- Negro: #000000
+- Blanco: #FFFFFF
+- Rojo acento: #FF3A20 o rgb(255,58,32)
+- Lime acento: #c4ff00 (hover effects)
+- Verde Trustpilot: #00b67a
+- Fondo oscuro: neutral-950
+- Borders claros: border-white/10
+- Borders sobre blanco: border-gray-200
+
+TIPOGRAFÍA:
+- Títulos (h1, h2, h3): Geist de Google Fonts, font-weight: 800
+- Textos de cuerpo: Satoshi Variable de Fontshare
+- Importar ambas fuentes en el layout
+
+ESTRUCTURA COMPLETA (7 SECCIONES):
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. NAVBAR (FIJA)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Position: fixed, z-50
+- Fondo: bg-black/90 con backdrop-blur-md
+- Border bottom: border-white/10
+- Height: 64px desktop, 56px mobile
+- Logo "NOVOLABS" a la izquierda (texto o imagen)
+- Max-width: 6xl, padding: px-4 sm:px-6
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2. HERO SECTION (FONDO NEGRO)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Padding top para compensar navbar fija: pt-20 sm:pt-28 md:pt-32
+
+LAYOUT: Grid 2 columnas en desktop (md:grid-cols-2), 1 columna en mobile
+
+COLUMNA IZQUIERDA (Texto):
+- Badge superior: "Tu entrevista esta confirmada ✅"
+  * Estilo: py-2 px-4 rounded-full bg-white/5 border border-white/10
+  * Text: text-xs tracking-widest uppercase text-gray-400
+  * Font: Geist
+
+- Título principal (h1):
+  * Línea 1: "Estás más cerca de" (blanco)
+  * Línea 2: "lanzar tu proyecto" (color #FF3A20)
+  * Font-size: text-[48px] en desktop, responsive en mobile
+  * Font-weight: 800
+  * Font-family: Geist
+  * Leading: leading-[1.2]
+
+- Párrafo descriptivo:
+  * Mobile: "Quiero darte la bienvenida al proceso de selección personalmente."
+  * Desktop: "Quiero darte la bienvenida personalmente al proceso de inscripción a Novolabs Startup School."
+  * Color: text-gray-300
+  * Size: text-lg md:text-xl
+
+- Animación Motion: Fade in + slide up (initial: opacity 0, y: 20)
+
+COLUMNA DERECHA (Video):
+- Container: aspect-[9/16] (formato vertical)
+- Max-width: 350px, centrado en mobile
+- Border: rounded-xl sm:rounded-2xl, border-white/10
+- Shadow: shadow-2xl
+
+Video thumbnail (estado inicial):
+- Overlay con botón play centrado
+- Botón play: 
+  * Size: w-20 h-20
+  * Fondo: bg-lime-400/90 con rounded-full
+  * Ícono: Lucide Play (text-black fill-current)
+  * Hover: scale-110 transition
+  * Shadow: shadow-lime-400/30
+
+Video iframe (cuando se hace click):
+- URL: https://streamable.com/e/5jmnc2?autoplay=1&controls=1
+- Fullscreen habilitado
+- Allow: accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen
+
+FLECHA ANIMADA (Solo desktop lg:block):
+- Posición: absolute, bottom-8, -left-44
+- Texto arriba de la flecha:
+  * "TOMÁS VOLONTÉ"
+  * "CO-FUNDADOR DE NOVOLABS" (text-xs)
+  * Font-weight: 700, Geist
+- SVG de flecha curva:
+  * Path animado con Motion (pathLength: 0 → 1)
+  * Color: #c4ff00
+  * Stroke-width: 3
+  * Animación: duration 1.2s, delay 1s, easeInOut
+  * Punta de flecha animada (opacity + scale)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3. INTRO TESTIMONIALS (FONDO BLANCO)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Fondo: bg-white
+- Border top: border-gray-200
+- Padding: py-12 sm:py-16 md:py-20
+
+HEADER:
+- Título: "Antes de seguir, <span rojo>leé esto:</span>"
+  * "leé esto:" en color #FF3A20
+  * Font: Geist, font-weight: 800
+  * Size: text-2xl sm:text-3xl md:text-4xl
+- Subtítulo: "Algunas de las +300 personas que ya pasaron por Novolabs"
+  * Color: text-gray-600
+  * Size: text-sm sm:text-base
+
+GRID DE 3 TESTIMONIOS:
+- Layout: grid-cols-1 md:grid-cols-3, gap-5 sm:gap-6
+- Cards: bg-white, border border-gray-200, rounded-xl, p-5 sm:p-6
+- Hover: border-lime-400/50 transition
+
+Estructura de cada card:
+1. Header con flex items-center gap-3:
+   - Avatar: w-14 h-14 rounded-full, border-2 border-gray-200
+   - Nombre: text-gray-900, font-weight: 600
+   - 5 estrellas de Trustpilot (color #00b67a, fill #00b67a)
+   - Ícono de LinkedIn (clickeable, abre en nueva pestaña)
+
+2. Texto del testimonio:
+   - Comillas: "texto"
+   - Italic, text-gray-700
+   - Size: text-sm sm:text-base
+   - Leading: leading-relaxed
+
+DATOS DE LOS 3 TESTIMONIOS:
+1. Alexy Narváez: "Es un proceso adaptado a cada industria, con acompañamiento real. Aprendí a testear mi idea sin tirar plata antes de tiempo. La comunidad es excelente, todos apoyándose."
+
+2. Magdalena Laplacette: "Los chicos de Novolabs, tanto Dami, Tomi como todo el equipo de mentores, son grandes profesionales que te ayudan a llevar a cabo tu proyecto, con paciencia, sabiduría, y lo mas importante, desafiandote a ir por todo."
+
+3. Hernán Farruggia: "Entré con ideas vagas y salí con un plan claro. Me ayudaron a evitar errores costosos y a enfocarme en lo que realmente importa. Hoy ya tengo tracción real."
+
+RATING DE TRUSTPILOT (al final):
+- Centrado, inline-flex items-center gap-2
+- Texto: "4.8" + 4 estrellas completas + media estrella + "en" + link "Trustpilot"
+- Media estrella: overlay con width: 50%
+- Link: https://www.trustpilot.com/review/novolabs.xyz?languages=all
+- Hover del link: text-lime-400
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4. VIDEO TESTIMONIALS (FONDO NEUTRAL-950)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Fondo: bg-neutral-950
+- Border top: border-white/5
+- Padding: py-12 sm:py-16 md:py-24
+
+HEADER:
+- Título: "Opiniones reales, <span rojo>sin humo.</span>"
+  * "sin humo." en color #FF3A20
+  * Font: Geist, font-weight: 800
+  * Size: text-3xl sm:text-4xl md:text-5xl
+- Subtítulo: "Nada mejor que escuchar directamente a las personas que ya pasaron por lo que vos estás pasando ahora."
+  * Color: text-gray-400
+  * Size: text-sm sm:text-base
+
+GRID DE 6 VIDEOS:
+- Layout: grid-cols-1 md:grid-cols-2, gap-5 sm:gap-6 md:gap-8
+- Cards: bg-neutral-900, rounded-xl sm:rounded-2xl, border border-white/10
+- Hover: border-lime-400/50, active:scale-[0.98]
+- Cursor: pointer, touch-manipulation
+
+Estructura de cada card de video:
+1. Badge superior izquierda (absolute, top-4 left-4, z-20):
+   - Fondo: bg-black/10 backdrop-blur-sm
+   - Border: border-white/10, rounded-lg, px-3 py-2
+   - Industria arriba: text-xs text-white tracking-wide
+   - Línea divisoria lime: h-[1px] bg-lime-400/40
+   - Nombre abajo: text-xs sm:text-sm text-white font-weight: 500
+
+2. Thumbnail horizontal:
+   - Aspect ratio: aspect-[16/9]
+   - Overlay degradado: bg-gradient-to-t from-black via-black/20 to-transparent
+   - Hover: scale-105 transition-transform duration-700
+
+3. Botón play centrado (absolute, inset-0, flex center):
+   - Size: w-16 h-16 sm:w-[70px] sm:h-[70px]
+   - Fondo: bg-white/10 backdrop-blur-md
+   - Border: border-white/20, rounded-full
+   - Hover: bg-[#c4ff00] border-[#c4ff00]
+   - Ícono play: text-white group-hover:text-black fill-current ml-1
+
+4. Quote en la parte inferior (absolute, bottom-4 left-4 right-4):
+   - Color: text-white
+   - Font: italic, font-weight: 600
+   - Size: text-sm sm:text-base md:text-lg
+   - Leading: leading-snug
+
+DATOS DE LOS 6 VIDEOS:
+1. Magdalena Biassuto - Salud: "Mejoré mi idea original y encontré a mi socio tech dentro del Programa..." → https://www.youtube.com/embed/ESUN3E3aX3g
+
+2. Raul Monge - Logística: "Conseguí mis primeros 15 clientes recurrentes en menos de 4 meses..." → https://www.youtube.com/embed/7F4_lbbzPKM
+
+3. Roberto Jimenez - Legales: "Tengo una idea mucho más sólida y los primeros clientes..." → https://www.youtube.com/embed/XOs8wzErvVw
+
+4. Laura Martinez - Energías Renovables: "Me gustó tanto el Programa que le cuento a todos de Novolabs..." → https://www.youtube.com/embed/83F0dm9QVmY
+
+5. Valentín Llorens - Educación: "Descubrí una nueva forma de emprender, me cambiaron la cabeza..." → https://www.youtube.com/embed/_cnUn0Q0uEs
+
+6. Gabriel Vicentin - Deporte: "Ojalá hubiera conocido Novolabs hace muchos años atrás..." → https://www.youtube.com/embed/uloRdBDJsHw
+
+MODAL DE VIDEO:
+- Componente: shadcn/ui Dialog
+- Trigger: onClick en cada card
+- Content:
+  * Max-width: !max-w-md
+  * Padding: !p-0
+  * Fondo: bg-transparent, border-0
+  * Botón cerrar custom: absolute -top-12 right-0, rounded-full, bg-white/90
+- Video container:
+  * Aspect ratio: aspect-[9/16] (vertical)
+  * Max-height: max-h-[80vh]
+  * Fondo: bg-black, rounded-lg, shadow-2xl
+- iframe:
+  * URL con autoplay: ${videoUrl}?autoplay=1&fs=1&modestbranding=1&rel=0
+  * Clase: w-full h-full border-0
+  * allowFullScreen
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+5. TEXT TESTIMONIALS (FONDO BLANCO)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Misma estructura que IntroTestimonials
+- Fondo: bg-white
+- Border top: border-gray-200
+- Padding: py-12 sm:py-16 md:py-24
+
+HEADER:
+- Título: "Más y <span rojo>más testimonios</span>"
+  * "más testimonios" en color #FF3A20
+  * Font: Geist, font-weight: 800
+  * Size: text-3xl sm:text-4xl md:text-5xl
+
+GRID DE 12-15 TESTIMONIOS:
+- Layout: grid-cols-1 md:grid-cols-3, gap-5 sm:gap-6
+- Misma estructura de cards que IntroTestimonials
+- Avatar + nombre + 5 estrellas Trustpilot + LinkedIn + texto
+
+ALGUNOS DATOS DE TESTIMONIOS:
+- Henry: "Aprendí metodologías que aplicaré siempre. La parte de validación fue clave para mí: conseguí mis primeros clientes antes de lanzar. Es un programa serio, sin verso."
+
+- Tatiana Domínguez: "Nos ayudaron a validar el producto antes de desarrollarlo, ahorramos meses de trabajo. El nivel de feedback es brutal, te dicen la verdad sin filtros."
+
+- Luciano Schillagi: "Arranqué con dudas enormes sobre mi idea. Hoy tengo claridad total sobre qué hacer y cómo escalar. El equipo de Novolabs es increíble, te empujan a dar lo mejor."
+
+- Gerónimo Mársico: "Logré pivotar mi proyecto y encontrar product-market fit gracias al programa. La red de contactos que armé acá vale oro. Super recomendable para cualquier founder."
+
+- Isabel Darsin: "Los chicos de Novo son excelentes profesionales, tienen muchísima experiencia y un método para emprendedores que garantiza el éxito de tu start-up."
+
+- Ignacio Ferreira: "Me ayudaron a estructurar mi startup desde cero. Aprendí a vender antes de tener producto. El networking con otros founders fue un plus enorme."
+
+(Agregar 6-9 testimonios más con textos similares)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+6. CTA FINAL (FONDO NEGRO)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Fondo: bg-black
+- Text-align: center
+- Padding: py-12 sm:py-16 md:py-20
+
+CONTENIDO:
+- Título (h3): "¿Ready para la Entrevista?"
+  * Font: Geist, text-white
+  * Size: text-[32px]
+  * Margin-bottom: mb-4 sm:mb-6
+
+- Párrafo descriptivo:
+  * "Aprovecha al máximo los 45 minutos para demostrarnos por qué deberías quedar entre los 20 equipos de la Próxima Edición."
+  * Color: text-gray-400
+  * Size: text-sm sm:text-base
+  * Max-width: max-w-lg mx-auto
+  * Leading: leading-relaxed
+
+- Texto con emoji y flecha:
+  * "Nos vemos pronto 🫡" + ChevronRight icon
+  * Color: text-[#FF3A20]
+  * Border bottom: border-[#FF3A20]/30
+  * Inline-flex items-center gap-2
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+7. FOOTER (FONDO NEGRO)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Fondo: bg-black
+- Border top: border-white/10
+- Padding: py-8 sm:py-10 md:py-12
+
+LAYOUT:
+- Flex: flex-col md:flex-row
+- Justify: justify-between
+- Align: items-center
+- Gap: gap-4 sm:gap-6
+
+CONTENIDO:
+- Logo "NOVOLABS" a la izquierda (texto o imagen)
+- Copyright a la derecha:
+  * "{año actual} Novolabs Startup School. All rights reserved."
+  * Color: text-gray-500
+  * Size: text-xs sm:text-sm
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ESPECIFICACIONES TÉCNICAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DEPENDENCIAS:
+- lucide-react (para íconos: Play, Star, ChevronRight, X)
+- motion (framer-motion moderno): import { motion } from "motion/react"
+- shadcn/ui Dialog component
+- Next.js 14+ con App Router
+
+ANIMACIONES:
+- Hero texto: initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
+- Hero video: initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2, duration: 0.5 }}
+- Flecha SVG path: pathLength animation de 0 a 1, duration: 1.2s, delay: 1s
+- Flecha punta: opacity + scale animation, delay: 2.1s
+
+RESPONSIVE:
+- Mobile-first approach
+- Breakpoints: sm (640px), md (768px), lg (1024px)
+- Container: max-w-6xl mx-auto
+- Padding: px-4 sm:px-6
+- Grid columns: 1 en mobile, 2-3 en desktop
+
+FUENTES:
+- Geist de Google Fonts (weights: 400-900)
+- Satoshi Variable de Fontshare
+- Configurar en layout.tsx de Next.js
+
+ESTADOS INTERACTIVOS:
+- Hover en cards de testimonios: border-lime-400/50
+- Hover en botón play: scale-110 + bg-lime-400
+- Active en video cards: scale-[0.98]
+- Transitions suaves en todos los elementos
+
+ACCESIBILIDAD:
+- Todos los links con target="_blank" deben tener rel="noopener noreferrer"
+- Iframe con título descriptivo
+- Dialog con DialogTitle (puede ser sr-only)
+- aria-describedby en Dialog content
+
+OPTIMIZACIONES:
+- Usar "use client" en el componente principal
+- Lazy loading para videos
+- Next.js Image para avatares (opcional)
+- Selection custom: selection:bg-lime-400 selection:text-black
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PLACEHOLDERS TEMPORALES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Mientras no tengas assets reales, usa:
+- Logo: Texto estilizado "NOVOLABS"
+- Avatares: divs con bg-gray-300 rounded-full o https://ui-avatars.com
+- Thumbnails de video: divs con bg-gray-700 o https://placehold.co/600x400
+- Thumbnail hero: div con bg-gray-800
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+POR FAVOR:
+1. Crea la página completa con todas las 7 secciones
+2. Usa los colores exactos especificados
+3. Implementa las animaciones con Motion
+4. Asegura que sea totalmente responsive
+5. Usa Geist para títulos (font-weight: 800) y Satoshi para textos
+6. Implementa el modal de video con Dialog de shadcn/ui
+7. Agrega hover effects en todos los elementos interactivos
+
+¡Gracias!
