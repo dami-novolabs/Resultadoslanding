@@ -1,0 +1,180 @@
+=====================================================
+  GUIA DE USO - Seccion "Mas y mas testimonios"
+  Testimonios de texto con avatar, estrellas y LinkedIn
+=====================================================
+
+CONTENIDO DE ESTA CARPETA
+--------------------------
+export-text-testimonials/
+  GUIA_USO_EN_V0.txt                  <-- Esta guia
+  text-testimonials.tsx                <-- Componente autocontenido (Next.js App Router)
+  linkedin-icon.png                   <-- Icono de LinkedIn usado en las cards
+  avatars/
+    henry.png
+    tatiana-dominguez.png
+    luciano-schillagi.png
+    geronimo-marsico.png
+    isabel-darsin.png
+    ignacio-ferreira.png
+    adrian-dutra.png
+    camila-aguado.png
+    pol-lopez.png
+    maximiliano-fabian.png
+    silvina-fernandez.png
+    juan-martin-cavallari.png
+    lisandro-belmonte.png
+    mercedes-rey.png
+    lucas-zoppi.png
+
+
+PASO 1 - SUBIR IMAGENES AL NUEVO PROYECTO
+------------------------------------------
+En el nuevo chat de v0, arrastra las 15 imagenes de avatars/ + linkedin-icon.png
+y usa este prompt:
+
+  "Guarda estas imagenes en public/images/testimonials-text/
+   con los mismos nombres de archivo que tienen."
+
+Resultado esperado:
+  public/images/testimonials-text/henry.png
+  public/images/testimonials-text/tatiana-dominguez.png
+  public/images/testimonials-text/luciano-schillagi.png
+  public/images/testimonials-text/geronimo-marsico.png
+  public/images/testimonials-text/isabel-darsin.png
+  public/images/testimonials-text/ignacio-ferreira.png
+  public/images/testimonials-text/adrian-dutra.png
+  public/images/testimonials-text/camila-aguado.png
+  public/images/testimonials-text/pol-lopez.png
+  public/images/testimonials-text/maximiliano-fabian.png
+  public/images/testimonials-text/silvina-fernandez.png
+  public/images/testimonials-text/juan-martin-cavallari.png
+  public/images/testimonials-text/lisandro-belmonte.png
+  public/images/testimonials-text/mercedes-rey.png
+  public/images/testimonials-text/lucas-zoppi.png
+  public/images/testimonials-text/linkedin-icon.png
+
+
+PASO 2 - CREAR EL COMPONENTE
+-----------------------------
+Adjunta el archivo text-testimonials.tsx al chat y usa este prompt:
+
+  "Crea el componente components/text-testimonials.tsx usando el archivo
+   adjunto. Es un componente Next.js App Router con 'use client'. No
+   modifiques nada del archivo, solo guardalo en esa ruta."
+
+
+PASO 3 - USAR EN TU PAGINA
+---------------------------
+Luego en tu page.tsx o donde quieras usarlo:
+
+  import TextTestimonials from "@/components/text-testimonials";
+
+  // Dentro del JSX:
+  <TextTestimonials />
+
+
+ESPECIFICACIONES DE DISENO (por si necesitas ajustar)
+-----------------------------------------------------
+- Fondo de seccion: blanco (#FFFFFF)
+- Borde superior: border-t border-gray-200
+- Titulo: "Mas y <span rojo>mas testimonios</span>"
+  - Font: Geist (o tu font-sans) weight 800
+  - Tamano: text-3xl / sm:text-4xl / md:text-5xl
+  - Rojo del span: rgb(255, 58, 32)
+- Grid: 1 col mobile, 3 cols desktop (md:grid-cols-3)
+- Gap: gap-5 / sm:gap-6
+
+Cada card:
+  - bg-white, border border-gray-200, rounded-xl
+  - Padding: p-5 / sm:p-6
+  - Hover: border-lime-400/50
+  - Shadow: shadow-sm
+  - Avatar: 48x48 (sm: 56x56), rounded-full, border-2 border-gray-200
+  - Nombre: text-gray-900, font-weight 600
+  - Estrellas: 5x Star de lucide-react, color #00b67a (Trustpilot green)
+  - LinkedIn: icono 20x20, abre en nueva pestana
+  - Texto: text-gray-700, italic, text-sm / sm:text-base, leading-relaxed, con comillas
+
+Colores clave:
+  - Rojo Novolabs: rgb(255, 58, 32) / #FF3A20
+  - Verde Trustpilot: #00b67a
+  - Verde lima hover: lime-400/50
+  - Texto titulo: negro
+  - Texto body: gray-700
+
+Fuentes:
+  - Headings: Geist (weight 800)
+  - Body: Satoshi (o tu font-sans)
+  - Cargar via:
+    @import url('https://api.fontshare.com/v2/css?f[]=satoshi@1,2&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&display=swap');
+
+Dependencias requeridas:
+  - next (next/image)
+  - lucide-react (Star)
+  - tailwindcss
+
+
+DATOS COMPLETOS (15 TESTIMONIOS)
+---------------------------------
+Si necesitas los datos en otro formato, aca van:
+
+1.  Henry
+    LinkedIn: https://www.linkedin.com/in/frangeary/
+    Texto: "Aprendi metodologias que aplicare siempre. La parte de validacion fue clave para mi: consegui mis primeros clientes antes de lanzar. Es un programa serio, sin verso."
+
+2.  Tatiana Dominguez
+    LinkedIn: https://www.linkedin.com/in/tatiana-teresa-dominguez-rojas-65392415/
+    Texto: "Nos ayudaron a validar el producto antes de desarrollarlo, ahorramos meses de trabajo. El nivel de feedback es brutal, te dicen la verdad sin filtros."
+
+3.  Luciano Schillagi
+    LinkedIn: https://www.linkedin.com/in/lucianoschillagi/
+    Texto: "Arranque con dudas enormes sobre mi idea. Hoy tengo claridad total sobre que hacer y como escalar. El equipo de Novolabs es increible, te empujan a dar lo mejor."
+
+4.  Geronimo Marsico
+    LinkedIn: https://www.linkedin.com/in/geronimomarsico/
+    Texto: "Logre pivotar mi proyecto y encontrar product-market fit gracias al programa. La red de contactos que arme aca vale oro. Super recomendable para cualquier founder."
+
+5.  Isabel Darsin
+    LinkedIn: https://www.linkedin.com/in/isabeldarsin/
+    Texto: "Los chicos de Novo son excelentes profesionales, tienen muchisima experiencia y un metodo para emprendedores que garantiza el exito de tu start-up."
+
+6.  Ignacio Ferreira
+    LinkedIn: https://www.linkedin.com/in/ignacio-ferreira/
+    Texto: "Me ayudaron a estructurar mi startup desde cero. Aprendi a vender antes de tener producto. El networking con otros founders fue un plus enorme."
+
+7.  Adrian Dutra
+    LinkedIn: https://www.linkedin.com/in/adrian-dutra/
+    Texto: "Pase de estar perdido a tener un roadmap claro y ejecutable. Los mentores son cracks, te guian sin darte todo servido. Salis con habilidades reales."
+
+8.  Camila Aguado
+    LinkedIn: https://www.linkedin.com/in/camilaaguado/
+    Texto: "Me ayudo de forma practica y clara a llevar adelante mi emprendimiento. Novo es muy bueno!"
+
+9.  Pol Lopez
+    LinkedIn: https://www.linkedin.com/in/paullopezreyes/
+    Texto: "El acompanamiento fue increible, por el conocimiento y la cercania del equipo. Pero lo mejor es la comunidad: todos comparten, ayudan y suman. Emprender acompanado hace toda la diferencia."
+
+10. Maximiliano Fabian
+    LinkedIn: https://www.linkedin.com/in/maxifabian
+    Texto: "El nivel de profundidad en las sesiones es impresionante. Te ayudan a pensar estrategicamente y ejecutar de forma tactica. Los resultados hablan solos."
+
+11. Silvina Fernandez
+    LinkedIn: https://www.linkedin.com/in/silfernandez-liderarte/
+    Texto: "Entre en el programa buscando orientacion para poder llevar a cabo mi proyecto... Y al finalizar logre validar mi idea y lanzar mi MVP al mercado. A todos los que esten pensando en emprender no duden en que Novo es la mejor opcion."
+
+12. Juan Martin Cavallari
+    LinkedIn: https://www.linkedin.com/in/juan-mart%C3%ADn-cavallari-b25850ba
+    Texto: "Novolabs me ayudo a pasar del concepto a la ejecucion. Aprendi herramientas concretas que uso todos los dias. La comunidad es un diferencial enorme."
+
+13. Lisandro Belmonte
+    LinkedIn: https://www.linkedin.com/in/lisandro-belmonte-942335279/
+    Texto: "Tuve una gran experiencia en Novo, me ensenaron mucho y la comunidad siempre esta dispuesta a ayudar. Muy recomendable!!"
+
+14. Mercedes Rey
+    LinkedIn: https://www.linkedin.com/in/mercedes-rey82/
+    Texto: "Cambio mi forma de pensar los negocios. Aprendi a testear rapido, fallar barato y validar antes de invertir. Hoy mi startup esta creciendo gracias a lo que aprendi aca."
+
+15. Lucas Zoppi
+    LinkedIn: https://www.linkedin.com/in/zoppi/
+    Texto: "Arranque sin un norte claro y sali entendiendo por completo si mi emprendimiento va a funcionar o no. El nivel de atencion es excelente y en cada clase me he llevado cosas que no tenia en consideracion."
