@@ -444,7 +444,7 @@ const IntroTestimonials = () => {
             Antes de seguir, <span className="text-[rgb(255,58,32)]">leé esto:</span>
           </h2>
           <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
-            Algunas de las +300 personas que ya pasaron por Novolabs.
+            Algunas de las +350 personas que ya pasaron por Novolabs.
           </p>
         </div>
 
