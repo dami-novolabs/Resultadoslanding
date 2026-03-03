@@ -99,7 +99,7 @@ const Hero = () => {
             <span className="sm:hidden">Quiero darte la bienvenida al proceso de selección personalmente.</span>
             <span className="hidden sm:inline">Quiero darte la bienvenida personalmente a Novolabs Startup School.</span>
           </p>
-          <div className="flex flex-col items-center gap-6 mt-2">
+          <div className="flex flex-col items-start gap-8 mt-4">
             <a 
               href="https://info.novolabs.xyz/widget/form/kuNds4kU7sArnpVpkRI7"
               target="_blank"
