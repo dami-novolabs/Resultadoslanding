@@ -132,28 +132,27 @@ const Hero = () => {
           </motion.div>
 
           {/* Fullscreen Video Modal */}
-          <Dialog open={isVideoPlaying} onOpenChange={setIsVideoPlaying}>
-            <DialogContent className="max-w-[95vw] w-full max-h-[95vh] h-auto p-0 bg-black border-none overflow-hidden sm:max-w-[90vw] [&>button]:hidden">
-              <DialogTitle className="sr-only">Video del fundador</DialogTitle>
+          {isVideoPlaying && (
+            <div className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center">
               <button 
                 onClick={() => setIsVideoPlaying(false)}
-                className="absolute top-3 right-3 sm:top-4 sm:right-4 z-50 w-12 h-12 sm:w-14 sm:h-14 bg-black/70 hover:bg-black/90 border-2 border-white/30 hover:border-white/50 rounded-full flex items-center justify-center transition-all duration-200 shadow-lg"
+                className="fixed top-4 right-4 sm:top-6 sm:right-6 z-[10000] w-14 h-14 sm:w-16 sm:h-16 bg-[#E53935] hover:bg-[#C62828] rounded-full flex items-center justify-center transition-all duration-200 shadow-2xl"
                 aria-label="Cerrar video"
               >
-                <X className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+                <X className="w-7 h-7 sm:w-8 sm:h-8 text-white" strokeWidth={2.5} />
               </button>
-              <div className="relative w-full aspect-[9/16] sm:aspect-video max-h-[90vh]">
+              <div className="relative w-full max-w-[95vw] sm:max-w-[90vw] aspect-[9/16] sm:aspect-video max-h-[90vh]">
                 <iframe
                   src="https://www.tella.tv/video/vid_cmmasfaae027i04jofdowhpd3/embed?b=1&title=1&a=1&loop=0&autoPlay=true&t=0&muted=0&wt=1&o=1"
-                  className="w-full h-full border-0"
+                  className="w-full h-full border-0 rounded-xl"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                   allowFullScreen
                   allowTransparency
                   title="Video del fundador"
                 />
               </div>
-            </DialogContent>
-          </Dialog>
+            </div>
+          )}
 
           {/* Curved Arrow and Name Label - Desktop Only */}
           <motion.div
