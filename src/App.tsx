@@ -117,36 +117,42 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
             className="relative w-full max-w-[350px] mx-auto aspect-[9/16] bg-black rounded-xl sm:rounded-2xl border border-white/10 shadow-2xl overflow-hidden group cursor-pointer"
-            onClick={() => !isVideoPlaying && setIsVideoPlaying(true)}
+            onClick={() => setIsVideoPlaying(true)}
           >
-            {!isVideoPlaying ? (
-              <>
-                <div className="absolute inset-0 flex items-center justify-center z-10">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-lime-400/90 rounded-full flex items-center justify-center pl-1 shadow-lg shadow-lime-400/30 group-hover:scale-110 transition-transform duration-300">
-                    <Play className="w-6 h-6 sm:w-8 sm:h-8 text-black fill-current" />
-                  </div>
-                </div>
-                <img 
-                  src={heroVideoThumb} 
-                  alt="Video Thumbnail" 
-                  className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity"
-                />
-              </>
-            ) : (
-              <iframe
-                src="https://www.tella.tv/video/vid_cmmasfaae027i04jofdowhpd3/embed?b=1&title=1&a=1&loop=0&autoPlay=true&t=0&muted=1&wt=1&o=1"
-                className="w-full h-full border-0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                allowFullScreen
-                allowTransparency
-                title="Video del fundador"
-              />
-            )}
+            <div className="absolute inset-0 flex items-center justify-center z-10">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-lime-400/90 rounded-full flex items-center justify-center pl-1 shadow-lg shadow-lime-400/30 group-hover:scale-110 transition-transform duration-300">
+                <Play className="w-6 h-6 sm:w-8 sm:h-8 text-black fill-current" />
+              </div>
+            </div>
+            <img 
+              src={heroVideoThumb} 
+              alt="Video Thumbnail" 
+              className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity"
+            />
           </motion.div>
 
+          {/* Fullscreen Video Modal */}
+          <Dialog open={isVideoPlaying} onOpenChange={setIsVideoPlaying}>
+            <DialogContent className="max-w-[95vw] w-full max-h-[95vh] h-auto p-0 bg-black border-none overflow-hidden sm:max-w-[90vw]">
+              <DialogTitle className="sr-only">Video del fundador</DialogTitle>
+              <DialogClose className="absolute top-4 right-4 z-50 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                <X className="w-5 h-5 text-white" />
+              </DialogClose>
+              <div className="relative w-full aspect-[9/16] sm:aspect-video max-h-[90vh]">
+                <iframe
+                  src="https://www.tella.tv/video/vid_cmmasfaae027i04jofdowhpd3/embed?b=1&title=1&a=1&loop=0&autoPlay=true&t=0&muted=0&wt=1&o=1"
+                  className="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                  allowFullScreen
+                  allowTransparency
+                  title="Video del fundador"
+                />
+              </div>
+            </DialogContent>
+          </Dialog>
+
           {/* Curved Arrow and Name Label - Desktop Only */}
-          {!isVideoPlaying && (
-            <motion.div
+          <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
@@ -194,7 +200,6 @@ const Hero = () => {
                 />
               </svg>
             </motion.div>
-          )}
         </div>
       </div>
     </div>
