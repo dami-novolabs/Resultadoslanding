@@ -106,7 +106,7 @@ const Hero = () => {
             className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-[#E53935] hover:bg-[#C62828] text-white font-semibold text-sm sm:text-base rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
             style={{ fontFamily: 'Geist, sans-serif' }}
           >
-            Agendar entrevista de inscripción
+            Agendar entrevista (luego de ver el video)
           </a>
         </motion.div>
 
