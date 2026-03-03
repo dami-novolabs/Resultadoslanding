@@ -750,7 +750,7 @@ export default function App() {
         <p className="text-sm sm:text-base text-gray-400 max-w-lg mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
           Aprovecha al máximo los 45 minutos para demostrarnos por qué deberías quedar entre los 20 equipos de la Próxima Edición.
         </p>
-        <div className="flex flex-col items-center gap-6">
+        <div className="flex flex-col items-center gap-10">
           <a 
             href="https://info.novolabs.xyz/widget/form/kuNds4kU7sArnpVpkRI7"
             target="_blank"
