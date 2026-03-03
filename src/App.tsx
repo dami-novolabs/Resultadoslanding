@@ -120,6 +120,28 @@ const Hero = () => {
           >
             Despues del video, hace clic en este boton
           </a>
+          <a 
+            href="https://wa.me/5491163544698?text=Reci%C3%A9n%20termino%20de%20ver%20el%20video%20en%20el%20que%20me%20cuentan%20respecto%20al%20Programa%20de%204%20meses%2C%20pero%20tengo%20algunas%20preguntas%20para%20hacer%20antes.%20Me%20ayudan%3F"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ 
+              display: 'inline-block',
+              marginTop: '16px',
+              padding: '8px 0',
+              color: 'white',
+              fontFamily: 'Geist, sans-serif',
+              fontWeight: 400,
+              fontSize: '14px',
+              textDecoration: 'underline',
+              transition: 'color 0.2s ease',
+              background: 'none',
+              border: 'none'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.color = '#25D366'}
+            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+          >
+            Tengo una pregunta
+          </a>
         </motion.div>
 
         {/* Video Right - Vertical Format with Arrow Label */}
