@@ -109,16 +109,18 @@ const Hero = () => {
               backgroundColor: '#E53935',
               color: 'white',
               fontFamily: 'Geist, sans-serif',
-              fontWeight: 500,
+              fontWeight: 700,
               fontSize: '16px',
               borderRadius: '9999px',
               textDecoration: 'none',
-              transition: 'background-color 0.2s ease'
+              transition: 'background-color 0.2s ease',
+              textAlign: 'center',
+              lineHeight: '1.4'
             }}
             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#C62828'}
             onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E53935'}
           >
-            Agendar entrevista (luego de ver el video)
+            Agendar entrevista<br />(luego de ver el video)
           </a>
         </motion.div>
 
