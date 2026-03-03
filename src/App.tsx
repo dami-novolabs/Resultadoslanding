@@ -99,46 +99,49 @@ const Hero = () => {
             <span className="sm:hidden">Quiero darte la bienvenida al proceso de selección personalmente.</span>
             <span className="hidden sm:inline">Quiero darte la bienvenida personalmente a Novolabs Startup School.</span>
           </p>
-          <div className="flex flex-col items-start gap-8 mt-4">
-            <a 
-              href="https://info.novolabs.xyz/widget/form/kuNds4kU7sArnpVpkRI7"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ 
-                display: 'inline-block',
-                padding: '16px 32px',
-                backgroundColor: '#E53935',
-                color: 'white',
-                fontFamily: 'Geist, sans-serif',
-                fontWeight: 500,
-                fontSize: '16px',
-                borderRadius: '9999px',
-                textDecoration: 'none',
-                transition: 'background-color 0.2s ease'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#C62828'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E53935'}
-            >
-              Despues del video, hace clic en este boton
-            </a>
-            <a 
-              href="https://wa.me/5491163544698?text=Reci%C3%A9n%20termino%20de%20ver%20el%20video%20en%20el%20que%20me%20cuentan%20respecto%20al%20Programa%20de%204%20meses%2C%20pero%20tengo%20algunas%20preguntas%20para%20hacer%20antes.%20Me%20ayudan%3F"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ 
-                color: 'white',
-                fontFamily: 'Geist, sans-serif',
-                fontWeight: 400,
-                fontSize: '14px',
-                textDecoration: 'underline',
-                transition: 'color 0.2s ease'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#25D366'}
-              onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
-            >
-              Tengo una pregunta
-            </a>
-          </div>
+          <a 
+            href="https://info.novolabs.xyz/widget/form/kuNds4kU7sArnpVpkRI7"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ 
+              display: 'inline-block',
+              padding: '16px 32px',
+              backgroundColor: '#E53935',
+              color: 'white',
+              fontFamily: 'Geist, sans-serif',
+              fontWeight: 500,
+              fontSize: '16px',
+              borderRadius: '9999px',
+              textDecoration: 'none',
+              transition: 'background-color 0.2s ease'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#C62828'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E53935'}
+          >
+            Despues del video, hace clic en este boton
+          </a>
+          <a 
+            href="https://wa.me/5491163544698?text=Reci%C3%A9n%20termino%20de%20ver%20el%20video%20en%20el%20que%20me%20cuentan%20respecto%20al%20Programa%20de%204%20meses%2C%20pero%20tengo%20algunas%20preguntas%20para%20hacer%20antes.%20Me%20ayudan%3F"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ 
+              display: 'inline-block',
+              marginTop: '16px',
+              padding: '8px 0',
+              color: 'white',
+              fontFamily: 'Geist, sans-serif',
+              fontWeight: 400,
+              fontSize: '14px',
+              textDecoration: 'underline',
+              transition: 'color 0.2s ease',
+              background: 'none',
+              border: 'none'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.color = '#25D366'}
+            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+          >
+            Tengo una pregunta
+          </a>
         </motion.div>
 
         {/* Video Right - Vertical Format with Arrow Label */}
