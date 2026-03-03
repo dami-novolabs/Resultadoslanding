@@ -748,7 +748,7 @@ export default function App() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 text-center bg-black">
         <h3 className="text-xl sm:text-2xl md:text-2xl font-heading text-white mb-4 sm:mb-6 px-2 text-[32px]">¿Ready para la Entrevista?</h3>
         <p className="text-sm sm:text-base text-gray-400 max-w-lg mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
-> Aprovecha al máximo los 45 minutos para demostrarnos por qué deberías quedar entre los 20 equipos de la Próxima Edición.
+          Aprovecha al máximo los 45 minutos para demostrarnos por qué deberías quedar entre los 20 equipos de la Próxima Edición.
         </p>
         <a 
           href="https://info.novolabs.xyz/widget/form/kuNds4kU7sArnpVpkRI7"
