@@ -125,10 +125,11 @@ const Hero = () => {
               </>
             ) : (
               <iframe
-                src="https://streamable.com/e/5jmnc2?autoplay=1&controls=1"
+                src="https://www.tella.tv/video/vid_cmmasfaae027i04jofdowhpd3/embed?b=1&title=1&a=1&loop=0&autoPlay=true&t=0&muted=1&wt=1&o=1"
                 className="w-full h-full border-0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                 allowFullScreen
+                allowTransparency
                 title="Video del fundador"
               />
             )}
