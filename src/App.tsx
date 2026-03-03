@@ -133,11 +133,15 @@ const Hero = () => {
 
           {/* Fullscreen Video Modal */}
           <Dialog open={isVideoPlaying} onOpenChange={setIsVideoPlaying}>
-            <DialogContent className="max-w-[95vw] w-full max-h-[95vh] h-auto p-0 bg-black border-none overflow-hidden sm:max-w-[90vw]">
+            <DialogContent className="max-w-[95vw] w-full max-h-[95vh] h-auto p-0 bg-black border-none overflow-hidden sm:max-w-[90vw] [&>button]:hidden">
               <DialogTitle className="sr-only">Video del fundador</DialogTitle>
-              <DialogClose className="absolute top-4 right-4 z-50 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
-                <X className="w-5 h-5 text-white" />
-              </DialogClose>
+              <button 
+                onClick={() => setIsVideoPlaying(false)}
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 z-50 w-12 h-12 sm:w-14 sm:h-14 bg-black/70 hover:bg-black/90 border-2 border-white/30 hover:border-white/50 rounded-full flex items-center justify-center transition-all duration-200 shadow-lg"
+                aria-label="Cerrar video"
+              >
+                <X className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+              </button>
               <div className="relative w-full aspect-[9/16] sm:aspect-video max-h-[90vh]">
                 <iframe
                   src="https://www.tella.tv/video/vid_cmmasfaae027i04jofdowhpd3/embed?b=1&title=1&a=1&loop=0&autoPlay=true&t=0&muted=0&wt=1&o=1"
