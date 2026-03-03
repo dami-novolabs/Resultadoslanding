@@ -136,7 +136,7 @@ const Hero = () => {
               onMouseEnter={(e) => e.currentTarget.style.color = '#25D366'}
               onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
             >
-              Tengo una pregunta
+              Quiero hacer una pregunta primero
             </a>
           </div>
         </motion.div>
