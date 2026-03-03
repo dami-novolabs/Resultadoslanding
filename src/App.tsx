@@ -105,7 +105,6 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               style={{ 
-                display: 'inline-block',
                 padding: '16px 32px',
                 backgroundColor: '#E53935',
                 color: 'white',
@@ -114,7 +113,8 @@ const Hero = () => {
                 fontSize: '16px',
                 borderRadius: '9999px',
                 textDecoration: 'none',
-                transition: 'background-color 0.2s ease'
+                transition: 'background-color 0.2s ease',
+                width: 'fit-content'
               }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#C62828'}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E53935'}
