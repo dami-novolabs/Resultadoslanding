@@ -133,18 +133,23 @@ const Hero = () => {
 
           {/* Fullscreen Video Modal */}
           {isVideoPlaying && (
-            <div className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center">
+            <div 
+              className="fixed inset-0 z-[9999] bg-black flex items-center justify-center"
+              onClick={(e) => {
+                if (e.target === e.currentTarget) setIsVideoPlaying(false);
+              }}
+            >
               <button 
                 onClick={() => setIsVideoPlaying(false)}
-                className="fixed top-4 right-4 sm:top-6 sm:right-6 z-[10000] w-14 h-14 sm:w-16 sm:h-16 bg-[#E53935] hover:bg-[#C62828] rounded-full flex items-center justify-center transition-all duration-200 shadow-2xl"
+                className="fixed top-4 right-4 sm:top-6 sm:right-6 z-[10000] w-14 h-14 sm:w-16 sm:h-16 bg-[#E53935] hover:bg-[#C62828] rounded-full flex items-center justify-center transition-all duration-200 shadow-2xl border-2 border-white/20"
                 aria-label="Cerrar video"
               >
                 <X className="w-7 h-7 sm:w-8 sm:h-8 text-white" strokeWidth={2.5} />
               </button>
-              <div className="relative w-full max-w-[95vw] sm:max-w-[90vw] aspect-[9/16] sm:aspect-video max-h-[90vh]">
+              <div className="relative w-full max-w-[95vw] sm:max-w-[85vw] max-h-[85vh]" style={{ aspectRatio: '16/9' }}>
                 <iframe
-                  src="https://www.tella.tv/video/vid_cmmasfaae027i04jofdowhpd3/embed?b=1&title=1&a=1&loop=0&autoPlay=true&t=0&muted=0&wt=1&o=1"
-                  className="w-full h-full border-0 rounded-xl"
+                  src="https://www.tella.tv/video/vid_cmmasfaae027i04jofdowhpd3/embed?b=0&title=0&a=1&loop=0&autoPlay=true&t=0&muted=0&wt=0&o=0"
+                  className="absolute inset-0 w-full h-full border-0 rounded-xl"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                   allowFullScreen
                   allowTransparency
