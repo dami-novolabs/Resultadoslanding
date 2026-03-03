@@ -770,7 +770,7 @@ export default function App() {
             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#C62828'}
             onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E53935'}
           >
-            Agendar entrevista (luego de ver el video)
+            Agendar entrevista de inscripcion
           </a>
           <div className="inline-flex items-center gap-2 text-sm sm:text-base text-[#FF3A20] border-b border-[#FF3A20]/30 pb-0.5">
             Nos vemos pronto <ChevronRight size={16} className="sm:w-5 sm:h-5" />
