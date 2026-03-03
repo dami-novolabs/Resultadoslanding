@@ -99,6 +99,15 @@ const Hero = () => {
             <span className="sm:hidden">Quiero darte la bienvenida al proceso de selección personalmente.</span>
             <span className="hidden sm:inline">Quiero darte la bienvenida personalmente al proceso de inscripción a Novolabs Startup School.</span>
           </p>
+          <a 
+            href="https://info.novolabs.xyz/widget/form/kuNds4kU7sArnpVpkRI7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-[#E53935] hover:bg-[#C62828] text-white font-semibold text-sm sm:text-base rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+            style={{ fontFamily: 'Geist, sans-serif' }}
+          >
+            Agendar entrevista de inscripción
+          </a>
         </motion.div>
 
         {/* Video Right - Vertical Format with Arrow Label */}
