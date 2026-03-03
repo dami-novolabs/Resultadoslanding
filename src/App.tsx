@@ -118,7 +118,7 @@ const Hero = () => {
             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#C62828'}
             onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E53935'}
           >
-            Despues del video, hace clic
+            Despues del video, hace clic en este boton
           </a>
         </motion.div>
 
