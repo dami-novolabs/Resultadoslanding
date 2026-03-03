@@ -117,50 +117,36 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
             className="relative w-full max-w-[350px] mx-auto aspect-[9/16] bg-black rounded-xl sm:rounded-2xl border border-white/10 shadow-2xl overflow-hidden group cursor-pointer"
-            onClick={() => setIsVideoPlaying(true)}
+            onClick={() => !isVideoPlaying && setIsVideoPlaying(true)}
           >
-            <div className="absolute inset-0 flex items-center justify-center z-10">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-lime-400/90 rounded-full flex items-center justify-center pl-1 shadow-lg shadow-lime-400/30 group-hover:scale-110 transition-transform duration-300">
-                <Play className="w-6 h-6 sm:w-8 sm:h-8 text-black fill-current" />
-              </div>
-            </div>
-            <img 
-              src={heroVideoThumb} 
-              alt="Video Thumbnail" 
-              className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity"
-            />
+            {!isVideoPlaying ? (
+              <>
+                <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-lime-400/90 rounded-full flex items-center justify-center pl-1 shadow-lg shadow-lime-400/30 group-hover:scale-110 transition-transform duration-300">
+                    <Play className="w-6 h-6 sm:w-8 sm:h-8 text-black fill-current" />
+                  </div>
+                </div>
+                <img 
+                  src={heroVideoThumb} 
+                  alt="Video Thumbnail" 
+                  className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity"
+                />
+              </>
+            ) : (
+              <iframe
+                src="https://www.tella.tv/video/vid_cmmasfaae027i04jofdowhpd3/embed?b=1&title=1&a=1&loop=0&autoPlay=true&t=0&muted=1&wt=1&o=1"
+                className="w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                allowFullScreen
+                allowTransparency
+                title="Video del fundador"
+              />
+            )}
           </motion.div>
 
-          {/* Fullscreen Video Modal */}
-          {isVideoPlaying && (
-            <div 
-              className="fixed inset-0 z-[9999] bg-black flex items-center justify-center"
-              onClick={(e) => {
-                if (e.target === e.currentTarget) setIsVideoPlaying(false);
-              }}
-            >
-              <button 
-                onClick={() => setIsVideoPlaying(false)}
-                className="fixed top-4 right-4 sm:top-6 sm:right-6 z-[10000] w-14 h-14 sm:w-16 sm:h-16 bg-[#E53935] hover:bg-[#C62828] rounded-full flex items-center justify-center transition-all duration-200 shadow-2xl border-2 border-white/20"
-                aria-label="Cerrar video"
-              >
-                <X className="w-7 h-7 sm:w-8 sm:h-8 text-white" strokeWidth={2.5} />
-              </button>
-              <div className="relative w-full max-w-[95vw] sm:max-w-[85vw] max-h-[85vh]" style={{ aspectRatio: '16/9' }}>
-                <iframe
-                  src="https://www.tella.tv/video/vid_cmmasfaae027i04jofdowhpd3/embed?b=0&title=0&a=1&loop=0&autoPlay=true&t=0&muted=0&wt=0&o=0"
-                  className="absolute inset-0 w-full h-full border-0 rounded-xl"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                  allowFullScreen
-                  allowTransparency
-                  title="Video del fundador"
-                />
-              </div>
-            </div>
-          )}
-
           {/* Curved Arrow and Name Label - Desktop Only */}
-          <motion.div
+          {!isVideoPlaying && (
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
@@ -208,6 +194,7 @@ const Hero = () => {
                 />
               </svg>
             </motion.div>
+          )}
         </div>
       </div>
     </div>
