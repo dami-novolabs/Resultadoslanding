@@ -103,7 +103,7 @@ const Hero = () => {
             href="https://info.novolabs.xyz/widget/form/kuNds4kU7sArnpVpkRI7"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-[#E53935] hover:bg-[#C62828] text-white font-semibold text-sm sm:text-base rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+            className="inline-block px-8 sm:px-10 py-4 sm:py-5 bg-[#E53935] hover:bg-[#C62828] text-white font-semibold text-base sm:text-lg rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
             style={{ fontFamily: 'Geist, sans-serif' }}
           >
             Agendar entrevista (luego de ver el video)
