@@ -87,7 +87,7 @@ const Hero = () => {
           className="text-center md:text-left"
         >
           <span className="inline-block py-1.5 sm:py-2 px-3 sm:px-4 rounded-full bg-white/5 border border-white/10 text-[10px] sm:text-xs tracking-widest uppercase text-gray-400 mb-4 sm:mb-6" style={{ fontFamily: 'Geist, sans-serif' }}>
-            Tu entrevista esta confirmada ✅
+            Este video es el primer paso
           </span>
           <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl tracking-tight mb-4 sm:mb-6 leading-[1.2]" style={{ fontWeight: 800 }}>
             <span className="block whitespace-nowrap text-[48px]" style={{ fontFamily: 'Geist, sans-serif' }}>Estás más cerca de</span>
