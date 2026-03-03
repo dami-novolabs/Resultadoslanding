@@ -750,30 +750,31 @@ export default function App() {
         <p className="text-sm sm:text-base text-gray-400 max-w-lg mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
           Aprovecha al máximo los 45 minutos para demostrarnos por qué deberías quedar entre los 20 equipos de la Próxima Edición.
         </p>
-        <a 
-          href="https://info.novolabs.xyz/widget/form/kuNds4kU7sArnpVpkRI7"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ 
-            display: 'inline-block',
-            padding: '16px 32px',
-            backgroundColor: '#E53935',
-            color: 'white',
-            fontFamily: 'Geist, sans-serif',
-            fontWeight: 500,
-            fontSize: '16px',
-            borderRadius: '9999px',
-            textDecoration: 'none',
-            transition: 'background-color 0.2s ease',
-            marginBottom: '24px'
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#C62828'}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E53935'}
-        >
-          Agendar entrevista (luego de ver el video)
-        </a>
-        <div className="inline-flex items-center gap-2 text-sm sm:text-base text-[#FF3A20] border-b border-[#FF3A20]/30 pb-0.5">
-        Nos vemos pronto 🫡 <ChevronRight size={16} className="sm:w-5 sm:h-5" />
+        <div className="flex flex-col items-center gap-6">
+          <a 
+            href="https://info.novolabs.xyz/widget/form/kuNds4kU7sArnpVpkRI7"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ 
+              display: 'inline-block',
+              padding: '16px 32px',
+              backgroundColor: '#E53935',
+              color: 'white',
+              fontFamily: 'Geist, sans-serif',
+              fontWeight: 500,
+              fontSize: '16px',
+              borderRadius: '9999px',
+              textDecoration: 'none',
+              transition: 'background-color 0.2s ease'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#C62828'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E53935'}
+          >
+            Agendar entrevista (luego de ver el video)
+          </a>
+          <div className="inline-flex items-center gap-2 text-sm sm:text-base text-[#FF3A20] border-b border-[#FF3A20]/30 pb-0.5">
+            Nos vemos pronto <ChevronRight size={16} className="sm:w-5 sm:h-5" />
+          </div>
         </div>
       </section>
 
