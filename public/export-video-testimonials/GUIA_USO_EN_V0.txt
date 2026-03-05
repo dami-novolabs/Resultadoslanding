@@ -1,0 +1,141 @@
+===========================================================================
+  GUIA: COMO USAR EL COMPONENTE VIDEO TESTIMONIALS EN OTRO PROYECTO V0
+===========================================================================
+
+CONTENIDO DEL PAQUETE
+---------------------
+export-video-testimonials/
+  GUIA_USO_EN_V0.txt              <-- Este archivo
+  video-testimonials.tsx           <-- Componente React (Next.js App Router)
+  thumbnails/
+    magdalena-biassuto.png         <-- Thumbnail horizontal 16:9
+    raul-monge.png
+    roberto-jimenez.png
+    laura-martinez.png
+    valentin-llorens.png
+    gabriel-vicentin.png
+
+
+PASO 1 - SUBIR LAS IMAGENES
+----------------------------
+En tu otro proyecto v0, subi las 6 imagenes PNG de la carpeta thumbnails/
+a la carpeta public/images/testimonials/ de tu proyecto.
+
+Podes hacerlo arrastrando las imagenes al chat de v0 y diciendo:
+"Guarda estas imagenes en public/images/testimonials/ con estos nombres:
+magdalena-biassuto.png, raul-monge.png, roberto-jimenez.png,
+laura-martinez.png, valentin-llorens.png, gabriel-vicentin.png"
+
+
+PASO 2 - CREAR EL COMPONENTE
+-----------------------------
+Copia y pega el contenido de video-testimonials.tsx en el chat de v0,
+o subi el archivo directamente como adjunto, y usa este prompt:
+
+---INICIO PROMPT---
+
+Necesito que agregues esta seccion de video testimonials a mi proyecto.
+
+El componente se llama VideoTestimonials y tiene estas caracteristicas:
+- Fondo negro (neutral-950)
+- Titulo: "Opiniones reales, sin humo." donde "sin humo." esta en rojo rgb(255,58,32)
+- Subtitulo gris debajo
+- Grid de 6 tarjetas (1 columna mobile, 2 columnas desktop) con gap-5/6/8
+- Cada tarjeta tiene:
+  - Thumbnail horizontal 16:9 con imagen de fondo
+  - Badge arriba-izquierda con industria + linea verde lima + nombre (backdrop-blur)
+  - Boton play circular centrado (70px, fondo blur blanco/10, hover cambia a verde lima #c4ff00)
+  - Quote en cursiva bold abajo
+  - Borde border-white/10, hover cambia a lime-400/50
+  - Click escala 0.98 (active state)
+- Al hacer click en una tarjeta se abre un Dialog/Modal con:
+  - Video vertical embebido (aspect-ratio 9:16, max-height 80vh)
+  - Iframe de YouTube con autoplay
+  - Boton X de cierre arriba-derecha, circular blanco
+  - Fondo transparente, sin bordes del dialog
+
+Las imagenes ya estan en public/images/testimonials/ con estos nombres:
+magdalena-biassuto.png, raul-monge.png, roberto-jimenez.png,
+laura-martinez.png, valentin-llorens.png, gabriel-vicentin.png
+
+Los datos de cada testimonio son:
+
+1. Magdalena Biassuto | Salud
+   Video: https://www.youtube.com/embed/ESUN3E3aX3g
+   Quote: "Mejore mi idea original y encontre a mi socio tech dentro del Programa..."
+
+2. Raul Monge | Logistica
+   Video: https://www.youtube.com/embed/7F4_lbbzPKM
+   Quote: "Consegui mis primeros 15 clientes recurrentes en menos de 4 meses..."
+
+3. Roberto Jimenez | Legales
+   Video: https://www.youtube.com/embed/XOs8wzErvVw
+   Quote: "Tengo una idea mucho mas solida y los primeros clientes..."
+
+4. Laura Martinez | Energias Renovables
+   Video: https://www.youtube.com/embed/83F0dm9QVmY
+   Quote: "Me gusto tanto el Programa que le cuento a todos de Novolabs ..."
+
+5. Valentin Llorens | Educacion
+   Video: https://www.youtube.com/embed/_cnUn0Q0uEs
+   Quote: "Descubri una nueva forma de emprender, me cambiaron la cabeza..."
+
+6. Gabriel Vicentin | Deporte
+   Video: https://www.youtube.com/embed/uloRdBDJsHw
+   Quote: "Ojala hubiera conocido Novolabs hace muchos anos atras..."
+
+Dependencias necesarias:
+- lucide-react (iconos Play y X)
+- @radix-ui/react-dialog (via shadcn/ui Dialog)
+- next/image (para las imagenes)
+
+Usa el componente Dialog de shadcn/ui. Si no esta instalado, instalalo.
+El componente es "use client" porque usa useState.
+
+Aqui esta el codigo completo del componente:
+
+[PEGAR AQUI EL CONTENIDO DE video-testimonials.tsx]
+
+---FIN PROMPT---
+
+
+PASO 3 - IMPORTAR EN TU PAGINA
+-------------------------------
+Una vez creado, importalo en la pagina donde lo necesites:
+
+  import VideoTestimonials from "@/components/video-testimonials";
+
+  // Dentro de tu JSX:
+  <VideoTestimonials />
+
+
+COLORES CLAVE DE LA SECCION
+----------------------------
+- Fondo seccion: bg-neutral-950 (casi negro)
+- Fondo tarjeta: bg-neutral-900
+- Bordes: border-white/10 -> hover: border-lime-400/50
+- Titulo rojo: rgb(255,58,32)
+- Verde lima (boton play hover): #c4ff00
+- Badge: bg-black/10 backdrop-blur
+- Linea separadora badge: bg-lime-400/40
+- Texto quote: blanco, italic, font-weight 600
+- Subtitulo: text-gray-400
+
+
+TIPOGRAFIA ORIGINAL
+--------------------
+- Titulo h2: font-weight 800, font-family Geist (se puede cambiar a la fuente de tu proyecto)
+- Subtitulo: text-sm/base, gray-400
+- Industria en badge: text-[10px]/xs, tracking-wide, letter-spacing 0.05em
+- Nombre en badge: text-xs/sm, font-weight 500
+- Quote: text-sm/base/lg, font-weight 600, italic
+
+
+NOTAS IMPORTANTES
+-----------------
+- Los videos de YouTube se abren en formato VERTICAL (9:16) porque son grabaciones
+  de celular. Si tus videos son horizontales, cambia aspect-[9/16] por aspect-video.
+- El componente usa Image de next/image. Si tu proyecto usa Vite/React puro,
+  cambia <Image> por <img> y elimina las props fill/sizes.
+- La clase [&>button]:hidden oculta el boton X por defecto de DialogContent
+  y usa un boton custom posicionado arriba del modal.
